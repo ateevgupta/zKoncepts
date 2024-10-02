@@ -1,0 +1,939 @@
+<!-- Made by Ateev Gupta and Aryan Garg using Bootstrap 3.4.0 copyright 2019
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    Zkoncepts
+  </title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+
+    .la{
+      float: left;
+    }
+
+    .btn1{
+     background-color: rgb(22, 211, 47);
+   }
+   
+    .mybox {
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+    }
+
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h1{
+    font-size: 30px;
+    color: white;
+
+  }
+  h2 {
+    font-size: 24px;
+    
+    color: #3d32a3;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h3{
+    color: #000000;
+  }
+  h4 {
+    font-size: 15px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-image:URL("slider_background2.jpg")  ; /* to be fixed*/
+    color: #fff;
+    background-repeat: no-repeat;
+   padding: 18%;     
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .container-fluid {
+    padding:80px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    width:0%;
+    color: #f6f6f6;
+  }
+  .carousel-indicators li {
+    /* border-color: #f4511e; */
+    opacity: 0;
+    
+  }
+  .carousel-indicators li.active {
+    /* background-color: #f4511e; */
+    opacity: 0;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid rgb(255,192,0 ); 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+    height: 270px;
+  }
+  .panel1 {
+    border: 1px solid rgb(146,208,80 ); 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+    height: 270px;
+  }
+  .panel2 {
+    border: 1px solid rgb(179,165,178); 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+    height: 270px;
+  }
+  .panel3 {
+    border: 1px solid rgb(152,94,138); 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+    height: 270px;
+  }
+	     .panel4 {
+    border: 1px solid rgb(255,192,0); 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+    height: 270px;
+	 
+	  }
+	  .panel5 {
+    border: 1px solid rgb(152,94,138); 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+    height: 270px;
+  }
+
+  .panel-heading1 {
+    color: #fff !important;
+    background-color:rgb(179,165,178);
+    padding: 20px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-heading3 {
+    color: #fff !important;
+    background-color:  rgb(179,165,178);
+    padding: 20px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-heading2{
+    color: #fff !important;
+    background-color:  rgb(179,165,178);
+    padding: 20px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel1:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel2:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel3:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+	  	  .panel4:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+	  .panel5:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color:  rgb(179,165,178);
+    padding: 20px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+	  	   .panel-heading4 {
+    color: #fff !important;
+    background-color:  rgb(179,165,178);
+    padding: 20px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+.panel-heading5 {
+    color: #fff !important;
+    background-color:  rgb(179,165,178);
+    padding: 20px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 8px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: rgba(32, 17, 58, 0.9);
+    z-index: 9999;
+    border: 50;
+    font-size: 17px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 5px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #3721b3 !important;
+    background-color: rgb(22, 211, 47) !important;
+  }
+  
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#myPage"><img src="logo.png" /></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <!-- <li><a href="#about">About Us</a></li> -->
+         
+          <li><a href="#whyus">About Us</a></li>
+			 <li><a href="#services">Services</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#career">Career</a></li>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center">
+
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <b>
+            <h1>SAP Implementation<br></h1>
+          </b>
+        </div>
+        <div class="item">
+          <b>
+            <h1>SAP Support<br></h1>
+          </b>
+        </div>
+        <div class="item">
+          <b>
+            <h1>Custom Development<br></h1>
+          </b>
+        </div>
+        <div class="item">
+          <b>
+            <h1>Integration<br></h1>
+          </b>
+        </div>
+        <div class="item">
+          <b>
+            <h1>Corporate Traning<br></h1>
+          </b>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Container (About Section) -->
+  <!-- <div id="about" class="container-fluid bg-grey" >
+    <h2>About Us</h2><br>
+    <h4>
+      <p>Zkoncepts is SAP consulting and support services provider in domestic and international market. We have a good
+        setup to handle SAP Implementation, Roll out, Support and Custom Developments.</p><br>
+      <p>We have functional and technical experts in our team to provide fast and smooth and cost-effective delivery of
+        projects to our client.</p>
+      <br>
+    </h4>
+
+    <h3>Our mission</h3>
+    <h4>Every organization experience different challenges during its evolution. We support our customer during its
+      journey of evolution.</h4>
+    <h3>Our vision</h3>
+    <h4>Optimum use of technology to make business processes easy and reduce complexities.</h4>
+
+  </div>
+<br>
+  </div>
+  </div> -->
+
+  <!-- Container (Services) -->
+
+  
+
+    <!-- Container (WhyUs Section) -->
+    <div id="whyus" class="container-fluid bg-grey">
+      <div class="row">
+        <div class="">
+
+        </div>
+        <div class="">
+          <h4>Zkoncepts is SAP consulting and support services provider in domestic and international market. We have a
+            good
+            setup to handle SAP Implementation, Roll out, Support and Custom Developments.
+            We have functional and technical experts in our team to provide fast and smooth and cost-effective delivery
+            of
+            projects to our client.</h4>
+        </div>
+    
+      <div class="text-center">
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="panel-default text-center">
+            <div class="">
+              <h3>SAP experts in our team</h3>
+            </div>
+            <div class="panel-body">
+              <font align="left">
+                <h4>Team work play an important part to successful completion of task within the time limit. We have
+            functional
+            and
+          technical experts in our team with different industrial exposers. A good team is a pillar of an
+            organization.
+                </h4>
+              </font>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class=" panel-default text-center">
+            <div class="panel-heading6">
+              <h3>On time delivery</h3>
+            </div>
+            <div class="panel-body">
+              <font align="left">
+                <h4>Delay in delivery can increase cost of project. <br>We provide fast solution to our clients and<br> effort to
+            improve
+            our self constantly.</h4>
+              </font>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class=" panel-default text-center">
+            <div class="panel-heading6">
+              <h3>Fast support</h3>
+            </div>
+            <div class="panel-body">
+              <font align="left">
+                <h4>We provide fast support to our client for their exclusive requirements, starting from<br> requirement
+            gathering
+            to
+            implementation and support after implementation.</h4>
+              </font>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class=" panel-default text-center">
+            <div class="panel-heading6">
+		  <h3>Cost effective </h3>
+			
+ 
+            </div>
+            <div class="panel-body">
+              <font align="left">
+                <h4>Efficient performance and on time delivery<br> help to reduce cost of project and save money and time.</h4>
+              </font>
+            </div>
+
+          </div>
+        </div>
+		  </div>
+		  
+	
+            <div class=" panel-default text-center">
+          <img src="whyus.png" width="30%" height="100%">
+		  </div>
+		  </div>
+
+           <div id="services" class="container-fluid bg-grey">
+
+ <div class="container-fluid">
+      <div class="text-center">
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="panel4 panel-default text-center">
+            <div class="panel-heading4">
+              <h3>SAP <br>Implementation</h3>
+            </div>
+            <div class="panel-body">
+              <font align="left">
+                <h4> SAP consulting and SAP implementation start from project preparation to Go
+                  live and
+                  support.
+                  <!--Our on-time delivery prevents additional operational cost of project.
+                  <!-- <br> Project Preparation
+                  <br>Business Blueprint
+                  <br>Realization
+                  <br>Final Preparation
+                  <br>Go-Live and support -->
+                </h4>
+              </font>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="panel1 panel-default text-center">
+            <div class="panel-heading1">
+              <h3>SAP <br>support services</h3>
+            </div>
+            <div class="panel-body">
+              <font align="left">
+                <h4>SAP is a complex business solution and we provide support for day-to-day change requirements as
+                  well
+                  as
+                  improvement required for business process.<!-- We have functional and technical experts in our team
+                  for
+                  different
+                  modules to support our clients-->.</h4>
+              </font>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="panel2 panel-default text-center">
+            <div class="panel-heading2">
+              <h3>SAP<br>Integration</h3>
+            </div>
+            <div class="panel-body">
+              <font align="left">
+                <h4><!--Zkoncepts provide  Integration between SAP ERP system and other network within the organization
+                  system,-->
+                  Integration between SAP to SAP systems,integration with external system with third
+                  party
+                  enterprise
+                  application.</h4>
+              </font>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="panel3 panel-default text-center">
+            <div class="panel-heading3">
+		  <h3>SAP <br>S/4 HANA</h3>
+			
+ 
+            </div>
+            <div class="panel-body">
+              <font align="left">
+                <h4>
+SAP S/4 HANA consulting and SAP implementation start from project preparation to Go live and support. </h4>
+              </font>
+            </div>
+
+          </div>
+        </div>
+		  <div class="col-sm-3">
+          <div class="panel4 panel-default text-center">
+            <div class="panel-heading4">
+				<h3>SAP<br> Functional Services</h3>
+            </div>
+            <div class="panel-body">
+              <font align="left">
+                <h4>We provide SAP functional services for different SAP modules like SD/MM/FI/CO/PP/LE/PS/WM</h4>
+              </font>
+            </div>
+
+          </div>
+        </div>
+		  <div class="col-sm-3">
+          <div class="panel1 panel-left text-center">
+            <div class="panel-heading1">
+              <h3>SAP <br>Technical Services</h3>
+            </div>
+            <div class="panel-body">
+              <font align="left">
+                <h4>We provide SAP ABAP services for specific requirements.</h4>
+              </font>
+            </div>
+
+          </div>
+        </div>
+		  <div class="col-sm-3">
+          <div class="panel2 panel-left text-center">
+            <div class="panel-heading2">
+              <h3>Corporate<br> Training</h3>
+            </div>
+            <div class="panel-body">
+              <font align="left">
+                <h4>Zkoncepts provide training and user manuals to end user and managements during implementation
+                  and
+                  after
+                  implementation of SAP. </h4>
+              </font>
+            </div>
+
+        </div>
+      </div>
+		  <div class="col-sm-3">
+          <div class="panel3 panel-left text-center">
+            <div class="panel-heading5">
+              <h3>SAP Staff<br> Augmentation</h3>
+            </div>
+            <div class="panel-body">
+              <font align="left">
+                <h4>SAP professionals as per our customer requirement </h4>
+              </font>
+            </div>
+
+        </div>
+      </div>
+
+    </div>
+
+           
+
+
+
+  <div id="blog" class="container-fluid text-center bg-grey">
+    <h2 class="text">Our Blogs</h2>
+    <br><br>
+    <div class="blogpost">
+
+      <div class="row text-center">
+
+
+        <a href="blog1.html">
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="blog1.jpg" alt="Paris">
+              <p><strong> SAP SuccessFactor </strong></p>
+
+              <p>SAP SuccessFactors is a cloud-based ERP Suite to
+                automate HR processes, which enable HR functions to proactively
+                support business objectives of an organization. </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="blog2.html">
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="blog2.jpg" alt="New York">
+              <p><strong>SAP Digital Supply Chain Management</strong></p>
+
+              <p>In the digital economy, coming up with the dynamic nature of demand and supply is quite challenging.</p>
+              <br>
+            </div>
+          </div>
+        </a>
+
+        <a href="blog3.html">
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="blog5.jpeg" alt="New York">
+              <p><strong>SAP Business One</strong></p>
+
+              <p>SAP Business One is a ERP software introduced by SAP in 2002. </p>
+              <br>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+	  
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="container-fluid bg-black">
+<form action="MAILTO:renujbp@gmail.com" method="post">
+
+      <!-- <h2 class="text">Contact Us</h2> -->
+      <div class="row">
+        <font align="left">" <h2 class="text">Contact Us</h2>
+        </font>
+
+
+        <div class="col-sm-7 slideanim">
+
+          <div class="row">
+
+            <div class="col-sm-6 form-group">
+              <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="col-sm-6 form-group">
+              <input class="form-control" id="email" name="email" placeholder="Email" type="text" required>
+
+            </div>
+            <div class="col-sm-6 form-group">
+              <input class="form-control" id="number" name="number" placeholder="Number" type="text" required>
+
+            </div>
+            <div class="col-sm-6 form-group">
+              <input class="form-control" id="country" name="country" placeholder="Country" type="text" required>
+
+            </div>
+            <div class="col-sm-6 form-group">
+              <input class="form-control" id="company_name" name="company_name" placeholder="Company Name" type="text"
+                required>
+            </div>
+          </div>
+          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <button class="btn btn1 btn-default pull-right" type = "submit" onclick="sendData()">Submit</button>
+			
+				
+            </div>
+          </div>
+        </div>
+		  </form>
+        <div class="col-sm-5">
+          <div class="la">
+            <font align="left">
+              <p class="la"><span class="glyphicon glyphicon-map-marker"></span> 3rd Floor, Akshar BluChip IT Park,
+                Thane – Belapur
+                Road, Turbhe,
+                <br>
+                Navi Mumbai – 400705
+                <br>
+                India
+				<br><br>
+                <!-- <span class="glyphicon glyphicon-phone"></span> (+91) -->
+                <br><br>
+                <span class="glyphicon glyphicon-envelope"></span> contact@zkoncepts.com</p>
+            </font>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div id="career" class="container-fluid bg-grey">
+	  <form action="MAILTO:renujbp@gmail.com" method="post"></form>
+    <h1>
+      <font color=#3d32a3>Work with us?</font>
+    </h1><br><br>
+
+
+    <div class="row">
+
+
+
+      <div class="col-sm-3">
+        <p>First Name*</p>
+      </div>
+      <div class="col-sm-5 form-group">
+        <input class="form-control" id="Fname" name="Fname" type="text" required>
+
+      </div>
+    </div>
+    <div class="row">
+
+
+
+      <div class="col-sm-3">
+        <p>Last Name*</p>
+      </div>
+      <div class="col-sm-5 form-group">
+        <input class="form-control" id="Lname" name="Lname" type="text" required>
+
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-sm-3">
+        <p>Email*</p>
+      </div>
+      <div class="col-sm-5 form-group">
+        <input class="form-control" id="email" name="email" type="email" required>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <p>Phone Number*</p>
+      </div>
+      <div class="col-sm-5 form-group">
+        <input class="form-control" id="pno" name="pno" type="text" required>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <p>Current City Location</p>
+      </div>
+      <div class="col-sm-5 form-group">
+        <input class="form-control" id="city" name="city" type="text" required>
+
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-sm-3">
+        <p>Current Country Location</p>
+      </div>
+      <div class="col-sm-5 form-group">
+        <input class="form-control" id="country" name="country" type="text" required>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 form-group ">
+        <p>Summary of Proffesional Exprerience*</p>
+      </div>
+      <div class="col-sm-5 form-group">
+        <input class="form-control" id="Exprerience" name="Exprerience" type="text" required>
+
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-sm-8   form-group">
+        <button class="btn btn1 btn-default pull-right" type="submit">Submit</button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- Image of location/map -->
+
+  <footer class="container-fluid text-center">
+    <br><br><br><br>
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <!-- <h6>Website designed by Ateev Gupta and Aryan Garg &copy 2019</h6> -->
+
+    <br>
+  </footer>
+
+  <script>
+
+    function sendData() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var number = document.getElementById("number").value;
+      var country = document.getElementById("country").value;
+      var company_name = document.getElementById("company_name").value;
+      var comment = document.getElementById("comment").value;
+      // alert(name);
+    }
+
+    $(document).ready(function () {
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+
+      $(window).scroll(function () {
+        $(".slideanim").each(function () {
+          var pos = $(this).offset().top;
+
+          var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+        });
+      });
+    })
+
+
+
+
+  </script>
+
+</body>
+
+</html> -->

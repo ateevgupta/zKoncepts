@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    Our Blog
+  </title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    .rit {
+      padding-left: 3%;
+    }
+
+    .btn1 {
+      background-color: #3d32a3;
+      color: #fff;
+    }
+
+    .extra {
+      width: 43%;
+    }
+
+    a {
+      color: rgba(88, 86, 99, 0.795);
+    }
+
+    a:link,
+    a:visited {
+      color: rgba(88, 86, 99, 0.795);
+    }
+
+
+    .blogpost {
+      padding-left: 25%;
+    }
+
+    p {
+      font-size: 3;
+      text-align: left;
+      color: black;
+    }
+
+    .postTop {
+      text-align: center;
+    }
+
+    .postTitle {
+      text-align: left;
+      color: #303030;
+    }
+
+    body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: hsl(0, 0%, 51%);
+    }
+
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #3d32a3;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+
+
+    h3 {
+      color: #3d32a3;
+    }
+
+    h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .jumbotron {
+      background-image: URL("images/slider_background2.jpg");
+      /* to be fixed*/
+      color: #fff;
+      background-repeat: no-repeat;
+      padding: 18%;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .container-fluid {
+      padding: 60px 50px;
+    }
+
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+
+    .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+    }
+
+    .logo {
+      color: #f4511e;
+      font-size: 200px;
+    }
+
+    .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+    }
+
+    .carousel-control.right,
+    .carousel-control.left {
+      background-image: none;
+      width: 0%;
+      color: #f6f6f6;
+    }
+
+    .carousel-indicators li {
+      /* border-color: #f4511e; */
+      opacity: 0;
+
+    }
+
+    .carousel-indicators li.active {
+      /* background-color: #f4511e; */
+      opacity: 0;
+    }
+
+    .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+    }
+
+    .item span {
+      font-style: normal;
+    }
+
+    .panel {
+      border: 1px solid #f4511e;
+      border-radius: 0 !important;
+      transition: box-shadow 0.5s;
+    }
+
+    .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+    }
+
+    .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+    }
+
+    .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    .panel-footer {
+      background-color: white !important;
+    }
+
+    .panel-footer h3 {
+      font-size: 32px;
+    }
+
+    .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      background-color: rgba(32, 17, 58, 0.9);
+      z-index: 9999;
+      border: 50;
+      font-size: 17px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 5px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .navbar li a,
+    .navbar .navbar-brand {
+      color: #fff !important;
+    }
+
+    .navbar-nav li a:hover,
+    .navbar-nav li.active a {
+      color: #3721b3 !important;
+      background-color: rgb(22, 211, 47) !important;
+    }
+
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
+
+    footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+    }
+
+    .slideanim {
+      visibility: hidden;
+    }
+
+    .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+    }
+
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+
+      .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .logo {
+        font-size: 150px;
+      }
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+    }
+
+    h1 {
+
+      color: #3d32a3;
+    }
+
+    @media screen and (min-width:600px) {
+      .image {
+        width: 60%;
+        height: 40%;
+      }
+
+      h1 {
+        font-size: 75px;
+        color: #3d32a3;
+      }
+    }
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+
+  <div class="container-fluid text-center bg-grey">
+    <h1>SAP Business One</h1><br>
+
+    <div>
+      <img src="blog5.jpeg" class="image">
+    </div>
+
+    <br>
+    <font size="3" color=black align="left">
+      <p class="text-justify"> SAP Business One is a ERP software introduced by SAP in 2002. It is a low-cost ERP
+        solution for small
+        and
+        medium size business, supports in 26 languages and have around 41 country specific functions. SAP B1 built on
+        and runs on SQL server database and run on SAP HANA database. It can be deployed on premises as well as in
+        cloud.</p>
+      <p class="text-justify">It has 15 functional modules for a business. Most widely used modules are Financial, Sales
+        - A/R, Purchasing
+        - A/P,
+        Business partner, Inventory. </p>
+      <p class="text-justify">SAP B1 has Analytics to analyze real time reporting powered by SAP HANA. It is integrated
+        with Crystal
+        report so that reports can create and modify easily. User Defined Forms, Reports and Queries can create very
+        easily in SAP B1. SAP B1 can integrate with third party applications as well.</p>
+      <p class="text-justify"> SAP B1 has alerts and approvals authorization functionality to eliminate errors and
+        increase accuracy.
+        System
+        defined, or user defined alerts helps to take a quick and right decision.</p>
+      <p class="text-justify">
+        SAP B1 can Integrate with third party applications as well as main ERP system with the help of XML based
+        integration
+        framework. SAP also provide Business One Subsidiary Integration Solutions to integrate with SAP ECC
+      </p>
+    </font>
+    <font size="3" color=black align="left">
+      <p><b>Affordable way to manage small and medium-sized businesses</b></p>
+    </font>
+    <font size=3 color=black align="left">
+      <p>
+        Promotion planning
+        <br> Easy to use
+        <br> Realtime data access
+        <br>Rapid implementation
+        <br>Secure browser-based access from anywhere, at any time.
+        <br>It can be use as mobile app
+        <br>System defined and user defined Alerts and approvals
+        <br>Real time reporting
+        <br>Similar user interface for different modules
+        <br>Eliminate redundant data entry which reduced error
+        <br>SAP B1 can Integrate with third party applications as well as main ERP system
+
+
+      </p>
+    </font>
+
+    <p class="text-justify">SAP B1 is designed to help small and medium size business to manage and increase control and
+      help to take
+      decision based on real time information.</p>
+    <br>
+
+    <a href="index.html#contact">
+      
+       <h2 class="text-justify"> Would you like to know more about it?</h2>
+  
+       <h2  class="text-justify">We’d love to help you!<h2>
+      
+    </a>
+    <form action="blog3.php" method="post">
+
+
+      <div class="rit">
+        <h2  class="text-justify">Submit your comment</h2>
+        <div class="row">
+          <div class="col-sm-2 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-2 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+
+
+        <div class="extra">
+          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-5 form-group">
+            <button class="btn btn1 btn-default pull-right" type="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  </form>
+  </div>
+
+
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+
+      $(window).scroll(function () {
+        $(".slideanim").each(function () {
+          var pos = $(this).offset().top;
+
+          var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+        });
+      });
+    })
+  </script>
+
+</body>
+
+</html>
