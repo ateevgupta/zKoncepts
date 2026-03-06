@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zkoncepts - Under Construction</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS (Inlined for self-contained file) -->
+    <style>
+        :root {
+            --primary-color: #494180;
+            --accent-color: rgb(255, 157, 0);
+            --secondary-color: #5caf70;
+            --k-color: #100080;
+            --text-dark: #303030;
+            --text-light: #818181;
+            --bg-light: #F8F7FC;
+            --bg-dark: #20113A;
+            --white: #ffffff;
+            --font-heading: 'Sora', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition-speed);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Navbar */
+        .navbar {
+            /* Position changed to relative for this page to prevent overlap, or fixed with padding top in body */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: lightgray;
+            /* Deeper background for non-video hero */
+            backdrop-filter: blur(10px);
+            transition: background var(--transition-speed);
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width var(--transition-speed);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: var(--white);
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform var(--transition-speed), background var(--transition-speed);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background-color: #d64215;
+        }
+
+        /* Under Construction Section */
+        .under-construction {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10rem 5% 5rem;
+            background-color: var(--bg-light);
+        }
+
+        .uc-icon {
+            font-size: 5rem;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .under-construction h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .under-construction p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 3rem;
+            color: var(--text-light);
+        }
+
+        .contact-emails {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            display: inline-block;
+            text-align: left;
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        .contact-emails h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .email-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .email-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .email-item i {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        .email-item strong {
+            display: block;
+            color: var(--text-dark);
+            margin-bottom: 0.2rem;
+        }
+
+        .email-item a {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .email-item a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a0e30;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 3rem 5% 1rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo img {
+            width: 150px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links h4 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                display: none;
+            }
+
+            .under-construction h1 {
+                font-size: 2.5rem;
+            }
+
+            .email-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <span style="color: var(--secondary-color); font-size: 2rem;">Z</span>
+            <span style="color: var(--k-color); font-size: 2rem;">koncepts</span>
+        </div>
+        <ul class="nav-links">
+
+        </ul>
+    </nav>
+
+    <!-- Under Construction Section -->
+    <section class="under-construction">
+        <i class="fas fa-hard-hat uc-icon"></i>
+        <h1>Website Under Construction</h1>
+        <p>We are currently working hard to bring you the new online experience for <strong>Zkoncepts</strong>. Our
+            website is undergoing some exciting updates and will be back shortly.</p>
+
+        <div class="contact-emails">
+            <h3>Reach Out To Us</h3>
+            <div class="email-list">
+                <div class="email-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>General Inquiries</strong>
+                        <a href="mailto:contact@zkoncepts.com">contact@zkoncepts.com</a>
+                    </div>
+                </div>
+                <div class="email-item">
+                    <i class="fas fa-handshake"></i>
+                    <div>
+                        <strong>Sales</strong>
+                        <a href="mailto:sales@zkoncepts.com">sales@zkoncepts.com</a>
+                    </div>
+                </div>
+                <div class="email-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <strong>Careers</strong>
+                        <a href="mailto:hr@zkoncepts.com">hr@zkoncepts.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3 style="color: var(--white);">Zkoncepts</h3>
+                <p>Your trusted partner for SAP solutions.</p>
+            </div>
+            <div class="footer-links">
+
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <div style="display: flex; gap: 1rem; font-size: 1.5rem;">
+                    <a href="https://www.linkedin.com/company/zkoncepts"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/channel/UCaQkMTuZBTpisw-SEJbnUAA/"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Zkoncepts. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
